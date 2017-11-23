@@ -1,0 +1,52 @@
+<div ng-controller="ProductController" >
+	<div class="content-wrapper">
+			
+		<div>
+			<div><button ng-click="showProductEntry()">Add New Order</button></div>
+			
+		<div>
+		<div  ng-show="productEntry">
+		<span>Product Id</span>
+		<span><input ng-model="newProduct.id"/></span>
+		<span>Quantity</span>
+		<span><input ng-model="newProduct.quantity"/></span>
+		<span><button ng-disabled ="!newProduct.quantity && !newProduct.id"ng-click="addNewProduct(newProduct)">Add</button></span>
+		</div>
+		
+		<div ng-show="productList.length>0">
+		<table ng-show="productList.length>0">
+				<thead>
+				<tr>
+				<td>Product Name</td>
+				<td>Quantity</td>
+				<td>Price</td>
+				<td>Edit</td>
+				</tr>
+				
+				</thead>
+				<tbody>
+					<tr ng-repeat="pr in productList">
+						<td>{{pr.name}}</td>
+						<td>{{pr.quantity}}</td>
+						<td>{{pr.amount}}</td>
+						<td><input type="button" value="Remove" ng-click="removeProduct(pr)">
+					</tr>
+				</tbody>
+			</table>
+			<div>
+			<span><button ng-click="gettotoal()">Get Total</button></span>
+			<span>{{total}}</span>
+			</div>
+		</div>
+		
+		
+		
+		</div>
+		</div>
+		<br/><br/>
+		
+		
+		
+	</div>	
+	
+</div>	
