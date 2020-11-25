@@ -33,4 +33,4 @@ you can use any combination.
 if you select 
 id= 2, quantity = 5 then price will be 40 (4 item with special price and 1 item with normal price)
 
-to close session or to generate new order click on new order button
+to close session or to generate new order click on new order button.
